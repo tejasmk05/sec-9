@@ -77,3 +77,11 @@ jobs:
         run: ls
       - name: Deploy site
         run: echo "Deploying..."
+  java-script:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: get from js file
+        uses: ./.github/actions/javascript-actions

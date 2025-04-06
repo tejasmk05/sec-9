@@ -1,0 +1,5 @@
+name: javascript-actions
+description: 'My Javascript actions'
+runs:
+  using: 'node22'
+  main: 'main.js'
