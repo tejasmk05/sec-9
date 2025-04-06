@@ -4,3 +4,4 @@ const github = require('@actions/github');
 function run(){
     core.notice("My first javascript action");
 }
+run();

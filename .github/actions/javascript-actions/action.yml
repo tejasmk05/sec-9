@@ -1,5 +1,16 @@
 name: javascript-actions
 description: 'My Javascript actions'
+inputs:
+  bucket:
+    description: 'My S3 bucket name'
+    required: true
+  bucket-region:
+    description: 'My S3 region name'
+    required: false
+    default: 'eu-west-1'
+  bucket-folder:
+    description: 'My folder name containing files'
+    required: true
 runs:
   using: 'node20'
   main: 'main.js'
