@@ -78,7 +78,6 @@ jobs:
       - name: Deploy site
         run: echo "Deploying..."
   java-script:
-    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Get code
