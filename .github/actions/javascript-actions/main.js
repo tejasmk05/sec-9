@@ -10,7 +10,7 @@ function run(){
 
     //upload to S3 bucket
     const s3Uri = `s3://${bucket}`
-    exec.exec(`aws s3 synch ${bucketFolder} ${s3Uri} --region ${bucketRegion}`)
+    exec.exec(`aws s3 sync ${bucketFolder} ${s3Uri} --region ${bucketRegion}`)
 
 }
 run();
