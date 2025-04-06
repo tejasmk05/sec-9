@@ -1,5 +1,5 @@
 name: javascript-actions
 description: 'My Javascript actions'
 runs:
-  using: 'node22'
+  using: 'node20'
   main: 'main.js'
