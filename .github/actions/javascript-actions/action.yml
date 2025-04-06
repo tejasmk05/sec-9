@@ -4,11 +4,11 @@ inputs:
   bucket:
     description: 'My S3 bucket name'
     required: true
-  bucket-region:
+  bucketRegion:
     description: 'My S3 region name'
     required: false
     default: 'eu-west-1'
-  bucket-folder:
+  bucketFolder:
     description: 'My folder name containing files'
     required: true
 runs:
