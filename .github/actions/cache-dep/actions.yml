@@ -3,6 +3,8 @@ description: 'My description'
 runs:
   using: 'composite'
   steps:
+    - name: checkout code
+      uses: actions/checkout@v4
     - name: Cache dependencies
       id: cache
       uses: actions/cache@v4
