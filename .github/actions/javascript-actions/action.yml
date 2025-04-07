@@ -11,6 +11,9 @@ inputs:
   bucketFolder:
     description: 'My folder name containing files'
     required: true
+outputs:
+  website-url:
+    description: 'My websitee URL'
 runs:
   using: 'node20'
   main: 'main.js'
