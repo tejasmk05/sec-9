@@ -65,6 +65,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: Get code
         uses: actions/checkout@v4
@@ -73,6 +76,10 @@ jobs:
         with:
           name: dist-files
           path: ./dist
+      - name: Aws permissions
+        uses: aws-actions/configure-aws-credentials
+        with:
+          role-to-assign: arn:aws:iam::491085388181:role/my-git-role
       - name: Output contents
         run: ls
       - name: Deploy site
@@ -81,8 +88,5 @@ jobs:
         with:
           bucket: my-github-bucket-1 
           bucketFolder: ./dist
-        env: 
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} 
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Display URL
         run: echo "LIVE URL:${{steps.deploy.outputs.website-url}}"
