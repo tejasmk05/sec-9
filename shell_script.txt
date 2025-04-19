@@ -1,0 +1,65 @@
+Commands:
+Pwd: present working directory, it will display the current path.
+
+Cat <file name>: display the content in file.
+
+Man touch: it explains about touch command.
+
+Touch <test>: it created test file
+
+Mkdir <test>: it creates test folder
+
+Vim <test.sh>: it will create files, sh file and ask for data
+
+Before entering data press esc and I, so that we can enter the data 
+After entering the data press esc and :wq!
+
+Rm -rf <name>: it will delete the files/folders
+
+Nproc: it will display number of CPU's
+
+Free: it will display memory of machine
+
+Df -h: it will display all information on storage and disc details
+
+Ps -ef: it will display the processors list
+
+Ps -ef | grep java: it will display only java processors
+
+./test.sh | grep 1 : it will display only numbers which is having 1 in the sh file
+
+|  :it will send the output of first command to second command
+
+Set -x :  it will print commands in the output which is mentioned inside sh file
+
+Grep <required data> <file name> | awk -F"  "  '{print  $4}': it will display the 4th column data of that grep condition.
+
+Set -e: it will exit from sh file if any error occurred(except pipeline commands bc it will verify only last command on the commands)
+
+Set -o pipefail: it will exit from execution if any error occurred in pipeline commands
+
+Set -exo pipefail: comind of all three commands
+
+Cat test.log | grep ERROR: - it will display the errors in test.log file.
+
+Sudo / -name tejas : it will find for folders in alll the locations
+
+trap <'commands'> <SIGNAL>: if we enter this before executing sh file, after initiating sh if someone press ctrl+c then execution will not stop.
+
+
+Curl <URL> | grep ERROR: - using this we can verify errors in the some path log files
+
+
+
+
+
+Sudo apt update: after creatimg Ec2 instance run this query to install app changes.
+
+Sudo apt install ansible: to install ansible
+
+Ssh-keygen: to generate public key and private key
+Navigate to the generated path and
+
+~/.ssh/ to check public key and private key file names
+
+Du -sh: display the size of file
